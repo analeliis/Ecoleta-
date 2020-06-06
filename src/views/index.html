@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+<!--CRIANDO UMA VARIAVEL PARA SUBSTITUIR--->
+
+{% block styles %}
+  <!---puxa esses arquivos pro layout-->
+  <link rel="stylesheet" href="/styles/home.css">
+  <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{%block content%}
+  <div class="content">
+    <!--Caixa-->
+    <header>
+      <img src="/assets/logo.svg" alt="Logomarca">
+      <a href="/create-point">
+        <span></span>
+        <!--Colocar o icone-->
+        Cadastre um ponto de coleta</a>
+    </header>
+
+    <main>
+      <h1>Seu marketplace de coleta de resíduos</h1>
+
+      <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p>
+
+      <a href="#">
+        <span></span>
+        <strong>Pesquisar pontos de coleta</strong>
+      </a>
+
+    </main>
+
+  </div>
+  {%endblock%}
+
+  {% block modal %}
+    {%include "partials/modal.html"%}
+  {% endblock modal %}
+
+  {% block scripts %}
+    <script src="scripsts/index.js"></script>
+  {% endblock scripts %}
+
+  <!-- Caixa do lado de fora display line: caixa ocupar apenas o elemento display block: caixa pega toda linha joga pra baixo Dentro da DIV display flex: alinha os elemetos um do lado do outro dentro da div -->
