@@ -182,7 +182,7 @@ form button:hover{
   border: 2px solid #34cb79;
 }
 
-.items-grid li .img,
+.items-grid li img,
 .items-grid li span{
   pointer-events: none;  /*não existe o eventos de pointer no img span*/
 }

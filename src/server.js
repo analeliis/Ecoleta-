@@ -2,9 +2,15 @@ const express = require("express") //busca o modulo express e coloca dentro da v
 
 const server = express() //executar o express
 
+//Pegar o banco de dados(Acesso)
+const db = require("./database/db")
+
 
 //configurar pasta publica
 server.use(express.static("public"))
+
+//habilitar o uso do req.bodu na nossa aplicação
+server.use(express.urlencoded({extended:true}))
 
 
 //utilizando template engine
@@ -18,18 +24,91 @@ nunjucks.configure("src/views",{ //configurar o nunjucks qual a pasta que estao 
 
 //configurar caminhos da minha aplicação
 //pagina inicial
-//req: Requisição
+//req: Requisição 
 //res: Resposta do servidor
 server.get("/",(req,res) => {
   return res.render("index.html") //constroe a copia arquivo index /enviar variavel
 })
 
 server.get("/create-point",(req,res) =>{
-  return res.render("create-point.html") //constroe a copia arquivo create
+
+  //req.query: Query String da nossa url enviar dados
+  //console.log(req.query)
+
+  return res.render("create-point.html") //constroe a copia arquivo 
 })
 
+
+ server.post("/savepoint", function(req,res){
+
+   //req.body: O corpo do nosso formulário //pegar os valores da url
+   //console.log(req.body)
+
+   //inserir no banco de dados
+    const query = ` 
+      INSERT INTO places ( 
+        image,
+        name,
+        address,
+        address2,
+        state,
+        city,
+        items
+      
+     ) VALUES (?,?,?,?,?,?,?);
+
+    `
+    const values = [
+     req.body.image,
+     req.body.name,
+     req.body.address,
+     req.body.address2,
+     req.body.state,
+     req.body.city,
+     req.body.items
+    ]
+
+    function afterInsertData(err){
+      if(err){
+        return console.log(err)
+      }
+
+      console.log("Cadastrado com Sucesso")
+      console.log(this) //esta referenciando a resposta do run
+
+      return res.send("ok")
+      
+    }
+
+    db.run(query, values, afterInsertData ) 
+
+   
+ })
+
+
+
+
+
 server.get("/search",(req,res) =>{
-  return res.render("search-results.html") //constroe a copia arquivo create
+
+  //pegar os dados do banco de dados
+  db.all(`SELECT * FROM places`,function(err, rows){
+    if(err){
+      return console.log(err)
+    }
+
+    const total = rows.length
+
+    console.log("Aqui estão seus registros:")
+    console.log(rows)
+
+    //mostrar a página html com os dados do banco de dados
+    return res.render("search-results.html",{
+      places:rows,total: total
+    }) //constroe a copia arquivo create
+  })
+
+  
 })
 
 
