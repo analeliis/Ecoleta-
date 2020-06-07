@@ -35,7 +35,7 @@ function getCities(event){ //evento entra dentro da função
   .then((cities) =>{
 
     for(let city of cities) {//pegar um estado e colocar na outra variavel
-      citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>` 
+      citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>` 
     }
 
     citySelect.disabled = false

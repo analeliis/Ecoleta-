@@ -85,13 +85,17 @@ main .card p{
   color: #6c6c80;
 }
 
+body{
+  background-color:white ;
+}
 body::after{  /*pseudo codigo*/
   content: "";
-  position: fixed;
-  background: white;
-  top: 260px;
+  position: absolute;;
+  background: #f0f0f0f5;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  height: 16rem;
   z-index: -1
 }

@@ -10,6 +10,7 @@
 {% block styles %}
   <!---puxa esses arquivos pro layout-->
   <link rel="stylesheet" href="/styles/create-point.css">
+  <link rel="stylesheet" href="/styles/modal.css">
 {% endblock styles %}
 
 {%block content%}
@@ -31,15 +32,15 @@
 
       <div class="field-group">
         <div class="field">
-            <label for="name">Nome da entidade</label>
-            <!--Legenda que fica encima do campo for identificação-->
-            <input type="text" name="name" required="required">
-            <!--Entrada de DADOS-->
+          <label for="name">Nome da entidade</label>
+          <!--Legenda que fica encima do campo for identificação-->
+          <input type="text" name="name" required="required">
+          <!--Entrada de DADOS-->
         </div>
         <div class="field">
-            <label for="address">Imagem da entidade</label>
-            <!--add label+input-->
-            <input type="url" name="image" required="required" placeholder="http://">
+          <label for="address">Imagem da entidade</label>
+          <!--add label+input-->
+          <input type="url" name="image" required="required" placeholder="http://">
         </div>
       </div>
 
@@ -54,84 +55,91 @@
           <label for="address2">Número/Complemento</label>
           <!--add label+input-->
           <input type="text" name="address2" required="required">
-      </div>
-    </div>
-
-    <div class="field-group">
-      <div class="field">
-        <label for="state">Estado</label>
-        <!--add label+input-->
-        <select name="uf" required="required">
-          <option value="">Selecione o Estado</option>
-        </select>
-
-        <input type="hidden" name="state">
-        <!--esconder o campo para atualizar o nome do estado-->
+        </div>
       </div>
 
-      <div class="field">
-        <label for="city">Cidade</label>
-        <!--add label+input-->
-        <select name="city" disabled="disabled" required="required">
-          <!--Não deixar disponivel disabled-->
-          <option value="">Selecione a Cidade</option>
-        </select>
+      <div class="field-group">
+        <div class="field">
+          <label for="state">Estado</label>
+          <!--add label+input-->
+          <select name="uf" required="required">
+            <option value="">Selecione o Estado</option>
+          </select>
+
+          <input type="hidden" name="state">
+          <!--esconder o campo para atualizar o nome do estado-->
+        </div>
+
+        <div class="field">
+          <label for="city">Cidade</label>
+          <!--add label+input-->
+          <select name="city" disabled="disabled" required="required">
+            <!--Não deixar disponivel disabled-->
+            <option value="">Selecione a Cidade</option>
+          </select>
+        </div>
+        <!--Criar duas div nome*2-->
+
       </div>
-      <!--Criar duas div nome*2-->
 
-    </div>
+    </fieldset>
 
-  </fieldset>
+    <fieldset>
+      <legend>
+        <h2>Ítens de coleta</h2>
+        <span>Selecione um ou mais itens abaixo</span>
+      </legend>
 
-  <fieldset>
-    <legend>
-      <h2>Ítens de coleta</h2>
-      <span>Selecione um ou mais itens abaixo</span>
-    </legend>
+      <div class="items-grid">
+        <li data-id="Lâmpadas">
+          <img src="assets/lampadas.svg" alt="Lâmpadas">
+          <span>Lâmpadas</span>
+        </li>
+        <!-- li>img+span -->
 
-    <div class="items-grid">
-      <li data-id="Lâmpadas">
-        <img src="assets/lampadas.svg" alt="Lâmpadas">
-        <span>Lâmpadas</span>
-      </li>
-      <!-- li>img+span -->
+        <li data-id="Pilhas e Baterias">
+          <img src="assets/baterias.svg" alt="Pilhas e Baterias">
+          <span>Pilhas e Baterias</span>
+        </li>
 
-      <li data-id="Pilhas e Baterias">
-        <img src="assets/baterias.svg" alt="Pilhas e Baterias">
-        <span>Pilhas e Baterias</span>
-      </li>
+        <li data-id="Papéis e Papelão">
+          <img src="assets/papeis-papelao.svg" alt="Papéis e Papelão">
+          <span>Papéis e Papelão</span>
+        </li>
 
-      <li data-id="Papéis e Papelão">
-        <img src="assets/papeis-papelao.svg" alt="Papéis e Papelão">
-        <span>Papéis e Papelão</span>
-      </li>
+        <li data-id="Resíduos Eletrônicos">
+          <img src="assets/eletronicos.svg" alt="Resíduos Eletrônicos">
+          <span>Resíduos Eletrônicos</span>
+        </li>
 
-      <li data-id="Resíduos Eletrônicos">
-        <img src="assets/eletronicos.svg" alt="Resíduos Eletrônicos">
-        <span>Resíduos Eletrônicos</span>
-      </li>
+        <li data-id="Resíduos Orgânicos">
+          <img src="assets/organicos.svg" alt="Resíduos Orgânicos">
+          <span>Resíduos Orgânicos</span>
+        </li>
 
-      <li data-id="Resíduos Orgânicos">
-        <img src="assets/organicos.svg" alt="Resíduos Orgânicos">
-        <span>Resíduos Orgânicos</span>
-      </li>
+        <li data-id="Óleo de Cozinha">
+          <img src="assets/oleo.svg" alt="Óleo de Cozinha">
+          <span>Óleo de Cozinha</span>
+        </li>
+      </div>
 
-      <li data-id="Óleo de Cozinha">
-        <img src="assets/oleo.svg" alt="Óleo de Cozinha">
-        <span>Óleo de Cozinha</span>
-      </li>
-    </div>
+      <input type="hidden" name="items">
 
-    <input type="hidden" name="items">
+    </fieldset>
 
-  </fieldset>
+    <!--submit seria enviar os dados-->
+    <button type="submit">
+      Cadastrar ponto de coleta</button>
 
-  <!--submit seria enviar os dados-->
-  <button type="submit">
-    Cadastrar ponto de coleta</button>
+  </form>
 
-</form>
-{%endblock%}
+{%endblock content%}
+
+{%block modal%}
+  {% if saved %}
+    {%include "partials/point-created.html"%}
+  {% endif %}
+{%endblock modal%}
 
 {% block scripts %}
   <script src="scripsts/create-point.js"></script>

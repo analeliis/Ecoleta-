@@ -85,11 +85,11 @@ module.exports = db
 
   //4 Deletar dado de tabela
 
-    //  db.run(`DELETE FROM places WHERE id = ?`,[10],function(err){
-    //  if(err){
-    //     return console.log(err)
-    //   }
+    //   db.run(`DELETE FROM places WHERE id = ?`,[13],function(err){
+    //   if(err){
+    //      return console.log(err)
+    //    }
 
-    //   console.log("Registro deletado com sucesso !")
-    // })
+    //    console.log("Registro deletado com sucesso !")
+    //  })
 }) 

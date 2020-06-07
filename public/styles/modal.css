@@ -95,3 +95,15 @@
   display: none; /*nao vai aparecer na tela a class*/
 }
 
+/* Isto é para o modal point createed */
+#modal.point .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal.point h1{
+  color: white;
+
+  margin-top: 32px;
+}
