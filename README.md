@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-  <img src="https://ik.imagekit.io/uucjbwp1w2/Ecoleta_f7xJpxy-x.gif" alt="gitdovideo">
+  <img src="https://ik.imagekit.io/uucjbwp1w2/Ecoleta_WLsjYIHl_.gif" alt="gitdovideo">
 </h1>
 
 # Indice
@@ -13,7 +13,7 @@
 - [Como baixar o projeto  ](#-como-baixar-o-projeto)
 
 ## 🔖Sobre
-O projeto **Ecoleta** foi criado com o intuito de conectar empresas e entidades de coleta de resíduos orgânicos, criado dentro da Next Level Week da Rocketseat com o intuito de aprender novas ferramentas, aprender novas tecnologias
+O projeto **Ecoleta** foi criado com o intuito de conectar empresas e entidades de coleta de resíduos orgânicos, criado dentro da Next Level Week da Rocketseat com o intuito de aprender novas ferramentas e novas tecnologias
 
 ---
 
