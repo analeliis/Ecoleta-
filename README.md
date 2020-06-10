@@ -4,7 +4,7 @@
 
 
 <h1 align="center">
-  <img src="https://ik.imagekit.io/uucjbwp1w2/Ecoleta_WLsjYIHl_.gif" alt="gitdovideo">
+  <img src="./public/assets/Ecoleta.gif" alt="gitdovideo">
 </h1>
 
 # Indice
