@@ -13,7 +13,7 @@
 - [Como baixar o projeto  ](#-como-baixar-o-projeto)
 
 ## 🔖Sobre
-O projeto **Ecoleta** foi criado com o intuito de conectar empresas a entidades de coleta de resíduos orgânicos, criado dentro  Next Level Week da Rocketseat com o intuito de aprenderá novas ferramentas, aprenderá sobre novas tecnologias
+O projeto **Ecoleta** foi criado com o intuito de conectar empresas e entidades de coleta de resíduos orgânicos, criado dentro da Next Level Week da Rocketseat com o intuito de aprender novas ferramentas, aprender novas tecnologias
 
 ---
 
