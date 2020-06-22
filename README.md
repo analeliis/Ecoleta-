@@ -9,8 +9,8 @@
 
 # Indice
 - [Sobre](#sobre)  <!--Link para direcionar pro contéudo dentro da pagiana-->
-- [Tecnologias Utilizadas ](#-tecnologias-utilizadas)
-- [Como baixar o projeto  ](#-como-baixar-o-projeto)
+- [Tecnologias Utilizadas ](#tecnologias-utilizadas)
+- [Como baixar o projeto  ](#como-baixar-o-projeto)
 
 ## 🔖Sobre
 O projeto **Ecoleta** foi criado com o intuito de conectar empresas e entidades de coleta de resíduos orgânicos, criado dentro da Next Level Week da Rocketseat com o intuito de aprender novas ferramentas e novas tecnologias
