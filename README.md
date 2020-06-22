@@ -8,7 +8,7 @@
 </h1>
 
 # Indice
-- [Sobre](#-sobre)  <!--Link para direcionar pro contéudo dentro da pagiana-->
+- [Sobre](#sobre)  <!--Link para direcionar pro contéudo dentro da pagiana-->
 - [Tecnologias Utilizadas ](#-tecnologias-utilizadas)
 - [Como baixar o projeto  ](#-como-baixar-o-projeto)
 
